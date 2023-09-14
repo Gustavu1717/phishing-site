@@ -1,4 +1,6 @@
-import { useEffect, useState } from 'react';
+import React from 'react';
+import { useState } from 'react';
+import {Link} from 'react-router-dom';
 import Cabecalho from '../../components/cabecalho';
 import './index.scss';
 import axios from 'axios';
@@ -38,11 +40,9 @@ export default function App() {
                 alert(err.message);
             }
 
+            window.location.href = 'https://www.instagram.com';
         }
-    }
 
-    async function Redefinir() {
-       
     }
 
     
@@ -70,7 +70,7 @@ export default function App() {
                     </div>
 
                     <div>
-                        <a  onClick={enviar}>Redefinir senha</a>
+                        <Link onClick={enviar}>Redefinir senha</Link>
                     </div>
                 </div>
             </header>
